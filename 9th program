@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="in">login</button>
+    <button id="out">Logout</button>
+    <h1 id="head">User has Not logged In</h1>
+    <script>
+        const lin =document.getElementById('in');
+        const lout=document.getElementById('out');
+        const head=document.getElementById('head');
+        lin.addEventListener('click',perform);
+        lout.addEventListener('click',perform1);
+        function perform(){
+            localStorage.setItem('auth',true);
+            window.location.reload();
+        }
+        function perform1(){
+            localStorage.setItem('auth',false);
+            window.location.reload();
+        }
+        const loginStatus = localStorage.getItem("auth");
+      if (loginStatus != "false") {
+        head.innerHTML = "User is logged In";
+      } else {
+        head.innerHTML = "User Has Not logged In";
+      }
+
+    </script>
+</body>
+</html>
