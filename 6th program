@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    <h1 style="display:inline-block;">Which is favorite Programming Language:</h1>
+
+    </div>
+    <script>
+        const options = ["JavaScript", "Java", "Python", "C++"];
+        const container=document.getElementById('container');
+        const select = document.createElement("select");
+        options.forEach((data) => {
+        const option = document.createElement("option");
+        option.innerText = data;
+        option.value = data;
+        select.appendChild(option);
+      });
+        container.appendChild(select);
+    </script>
+</body>
+</html>
