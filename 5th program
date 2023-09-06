@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:400px ;
+            height: 400px;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">Your Image is visible.</h1>
+    <button id="but" >toggle image</button>
+    <br>
+    <img id="image"  src="https://cdn.pixabay.com/photo/2023/09/01/06/51/bird-8226361_1280.jpg" alt="">
+    <script>
+        const image=document.getElementById('image');
+        const but=document.getElementById('but');
+        const head=document.getElementById('head');
+        but.addEventListener('click',perform);
+        function perform(){
+            if (image.style.opacity == 0) {
+          image.style.opacity = 100;
+          head.innerText = "Your Image is visible.";
+        } else {
+          image.style.opacity = 0;
+          head.innerText = "Your Image is hidden.";
+        }
+        }
+    </script>
+</body>
+</html>
