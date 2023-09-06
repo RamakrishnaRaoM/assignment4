@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div>
+    <h1>Sign Up Form</h1>
+    <span>Name:</span>
+    <input type="text" id="name"   placeholder="(minimum 3 characters)">
+    <br>
+    </div>
+    <span>Email:</span>
+    <input type="text" id="email" placeholder="Enter Your Email">
+    <br>
+    <span>Password:</span>
+    <input type="text" id="password"  placeholder="(Minimum 3 characters)">
+    <br>
+    <button id="sub">submit</button>
+</div>
+    <script>
+        const name=document.getElementById('name');
+        const password=document.getElementById('password');
+        const submit=document.getElementById('sub');
+        submit.addEventListener('click',check);
+        function check(){
+            if(name.value.length<3 || password.value.length<8){
+                alert("form validation failed")
+            }
+            else{
+                alert("form validation sucessfull");
+            }
+        }
+    </script>
+</body>
+</html>
